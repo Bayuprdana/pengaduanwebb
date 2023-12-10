@@ -40,10 +40,10 @@
                   </div>
                     <form class="user" method="post" action="koneksi/proses-login.php">
                         <div class="form-group">
-                            <input type="text" name="nik" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan nik anda" required>
+                            <input type="text" name="nik" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan NIK" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password" required>
+                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Sandi" required>
                         </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                             Login
