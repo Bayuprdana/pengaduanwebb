@@ -17,6 +17,6 @@ if (mysqli_num_rows($query)>0){
     header("Location: ../masyarakat/masyarakat.php");
     exit;
 }else{
-    echo "<script>alert('Maaf Anda Gagal Login'); window.location.assign(' ../index.php)'); </script>";
+    echo "<script>alert('Maaf Anda Gagal Login'); window.location.assign(' ../index.php'); </script>";
 }
 ?>
