@@ -1,3 +1,4 @@
+
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -9,6 +10,7 @@
                   <thead>
                     <tr>
                       <th>No</th>
+                      <th>Kategori Pengaduan</th>
                       <th>Tgl Pengaduan</th>
                       <th>Isi Laporan</th>
                       <th>Foto</th>
@@ -19,6 +21,7 @@
                   <tfoot>
                     <tr>
                       <th>No</th>
+                      <th>Kategori Pengaduan</th>
                       <th>Tgl Pengaduan</th>
                       <th>Isi Laporan</th>
                       <th>Foto</th>
@@ -36,6 +39,7 @@
                     while($data = mysqli_fetch_array($query)){ ?>
                     <tr>
                       <td><?= $no++ ?></td>
+                      <td><?= $data['kategori_pengaduan']; ?></td>
                       <td><?= $data['tgl_pengaduan']; ?></td>
                       <td><?= $data['isi_laporan']; ?></td>
                       <td><?= $data['foto']; ?></td>

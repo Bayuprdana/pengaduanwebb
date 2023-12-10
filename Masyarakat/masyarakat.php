@@ -37,10 +37,8 @@ if (empty($_SESSION['nik'])){
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="(UBAH KE LINK WEB DESA))">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-th-large"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
+          <img src="../img/banjar.png" alt="Logo" class="sidebar-brand-icon rotate-n-15 custom-logo">
+          <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
       </a>
 
       <!-- Divider -->
@@ -109,7 +107,7 @@ if (empty($_SESSION['nik'])){
 
           <!-- Topbar search -->
 
-          <h1> Aplikasi Pengaduan Masyarakat</h1>
+          <h1> Layanan Pengaduan Masyarakat</h1>
 
         </nav>
         <!-- End of Topbar -->
@@ -130,7 +128,7 @@ if (empty($_SESSION['nik'])){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Aplikasi Pelaporan Masyarakat</span>
+            <span>Layanan Pengaduan Masyarakat</span>
           </div>
         </div>
       </footer>

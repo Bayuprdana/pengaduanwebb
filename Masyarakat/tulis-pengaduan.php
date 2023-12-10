@@ -9,21 +9,35 @@
 </div>
 <div class="card-body">
     <form method="post" action="proses-pengaduan.php" enctype="multipart/form-data">
+
     <div class="form-group">
-        <label style="font-size: 14px;">Tgl Pengaduan </label>
-        <input type="text" name="tgl_pengaduan" class="form-control" readonly value="<?= date('Y-m-d'); ?>">
+                <label style="font-size: 14px;">Kategori Pengaduan </label>
+                <select name="kategori_pengaduan" class="form-control" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="Pengaduan Fasilitas">Pengaduan Fasilitas</option>
+                    <option value="Pengaduan Kebersihan">Pengaduan Kebersihan</option>
+                    <option value="Pengaduan Kegiatan">Pengaduan Kegiatan</option>
+                    <option value="Pengaduan Perangkat Desa">Pengaduan Perangkat Desa</option>
+                    <option value="Pengaduan Keamanan">Pengaduan Keamanan</option>
+                </select>
     </div>
 
-        <div class="form-group">
+    <div class="form-group">
+        <label style="font-size: 14px;">Tgl Pengaduan </label>
+        <input type="date" name="tgl_pengaduan" class="form-control" required>
+    </div>
+
+    <div class="form-group">
         <label style="font-size: 14px">Isi Laporan </label>
             <textarea name="isi_laporan" class="form-control" required></textarea>
-        </div>
-        <div class="form-group">
-            <label style="font-size: 14px">Foto </label>
-            <input type="file" required class="form-control" name="foto" accept="image/*">
-        </div>
+    </div>
 
-        <div class="form-group">
-            <button type="submit" class="btn btn-success"> SIMPAN </button>
+    <div class="form-group">
+        <label style="font-size: 14px">Foto </label>
+        <input type="file" required class="form-control" name="foto" accept="image/*">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success"> SIMPAN </button>
     </form>
 </div>
