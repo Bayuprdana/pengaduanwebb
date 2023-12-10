@@ -1,6 +1,6 @@
 <?php
 
-$username        = $_POST['username'];
+$username   = $_POST['username'];
 $password   = $_POST['password'];
 
 include 'koneksi.php';
@@ -15,12 +15,13 @@ if (mysqli_num_rows($query)>0){
     $_SESSION['level'] = $data['level'];
 
         if($data['level']=="admin"){
-            header("Location:admin/admin.php");
+            header("Location: ../admin/admin.php");
+            exit;
         }
         elseif($data['level']=="petugas"){
-            header("Location:petugas/petugas.php");
+            header("Location: ../petugas/petugas.php");
         }
 }else{
-    echo "<script>alert('Maaf Anda Gagal Login'); window.location.assign('index.php)'); </script>";
+    echo "<script>alert('Maaf Anda Gagal Login'); window.location.assign(' ../index.php)'); </script>";
 }
 ?>

@@ -8,11 +8,11 @@ $lokasi_foto    = $_FILES['foto']['tmp_name'];
 $nama_foto      = $_FILES['foto']['name'];
 $status         = 0;
 
-if (move_uploaded_file($lokasi_foto, 'foto/' . $nama_foto)) {
+if (move_uploaded_file($lokasi_foto, '../foto/' . $nama_foto)) {
     $sql = "INSERT INTO pengaduan(tgl_pengaduan, nik, isi_laporan, foto, status) 
     VALUES ('$tgl_pengaduan', '$nik', '$isi_laporan', '$nama_foto', '$status')";
 
-    include 'koneksi.php';
+    include '../koneksi/koneksi.php';
     if (mysqli_query($koneksi, $sql)) {
         echo "<script>alert('Laporan Pengaduan Sudah Tersimpan.'); window.location.assign('masyarakat.php');</script>";
     } else {

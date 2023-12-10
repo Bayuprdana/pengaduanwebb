@@ -5,7 +5,7 @@ if(empty($id)){
     header("Location:masyarakat.php");
 }
 
-include 'koneksi.php';
+include '../koneksi/koneksi.php';
 $query  = mysqli_query($koneksi, "SELECT * FROM pengaduan WHERE id_pengaduan='$id'");
 $data   = mysqli_fetch_array($query);
 ?>
@@ -32,7 +32,7 @@ $data   = mysqli_fetch_array($query);
         </div>
         <div class="form-group">
             <label style="font-size: 14px">Foto </label>
-            <img class="img-thumbnail" src="foto/<?= $data['foto'] ?>" width="300">
+            <img class="img-thumbnail" src="../foto/<?= $data['foto'] ?>" width="300">
         </div>
     </form>
 </div>

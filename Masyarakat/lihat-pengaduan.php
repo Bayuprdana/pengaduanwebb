@@ -29,7 +29,7 @@
                   </tfoot>
                   <tbody>
                     <?php
-                    include 'koneksi.php';
+                    include '../koneksi/koneksi.php';
                     $sql    = "SELECT * FROM pengaduan WHERE nik='$_SESSION[nik]' ORDER BY id_pengaduan DESC";
                     $query  = mysqli_query($koneksi, $sql);
                     $no     = 1;

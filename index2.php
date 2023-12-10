@@ -38,7 +38,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Selamat Datang Di pengaduan Masyarakat Petugas / Admin</h1>
                   </div>
-                    <form class="user" method="post" action="proses-login2.php">
+                    <form class="user" method="post" action="koneksi/proses-login2.php">
                         <div class="form-group">
                             <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan username anda" required>
                         </div>

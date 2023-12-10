@@ -38,7 +38,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Selamat Datang Di pengaduan Masyarakat</h1>
                   </div>
-                    <form class="user" method="post" action="proses-login.php">
+                    <form class="user" method="post" action="koneksi/proses-login.php">
                         <div class="form-group">
                             <input type="text" name="nik" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan nik anda" required>
                         </div>
@@ -49,7 +49,7 @@
                             Login
                             </button>
                             <hr>
-                            <a href="register.php" class="btn btn-success btn-user btn-block">
+                            <a href="pages/register.php" class="btn btn-success btn-user btn-block">
                                 <i class="fa fa-laptop fa-fw"></i> Belum Punya akun..? Daftar Sekarang
                             </a>
                             <a href="index2.php" class="btn btn-success btn-user btn-block">

@@ -36,7 +36,7 @@ if ($_SESSION['level']!="petugas"){
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="(UBAH JADI LINK WEB DESA)">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-th-large"></i>
         </div>
@@ -70,7 +70,7 @@ if ($_SESSION['level']!="petugas"){
 
        <!-- Nav Item - Logout -->
        <li class="nav-item">
-        <a class="nav-link" href="../logout.php">
+        <a class="nav-link" href="../pages/logout.php">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Logout</span></a>
       </li>
@@ -153,7 +153,7 @@ if ($_SESSION['level']!="petugas"){
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../login.html">Logout</a>
         </div>
       </div>
     </div>

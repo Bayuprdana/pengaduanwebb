@@ -4,19 +4,19 @@ if(isset($_GET['url'])){
     switch ($_GET['url']){
         
         case 'tulis-pengaduan':
-            include 'tulis-pengaduan.php';
+            include '../masyarakat/tulis-pengaduan.php';
             break;
 
         case 'lihat-pengaduan':
-            include 'lihat-pengaduan.php';
+            include '../masyarakat/lihat-pengaduan.php';
             break;
 
         case 'detail-pengaduan':
-            include 'detail-pengaduan.php';
+            include '../masyarakat/detail-pengaduan.php';
             break;
 
         case 'lihat-tanggapan':
-            include 'lihat-tanggapan.php';
+            include '../masyarakat/lihat-tanggapan.php';
             break;
 
             default :

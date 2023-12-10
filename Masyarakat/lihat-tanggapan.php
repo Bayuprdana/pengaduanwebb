@@ -5,7 +5,7 @@ if(empty($id)){
     header("Location:masyarakat.php");
 }
 
-include 'koneksi.php';
+include '../koneksi/koneksi.php';
 $query  = mysqli_query($koneksi, "SELECT * FROM pengaduan,tanggapan 
 WHERE tanggapan.id_pengaduan='$id' AND tanggapan.id_pengaduan=pengaduan.id_pengaduan");
 ?>
@@ -25,7 +25,7 @@ WHERE tanggapan.id_pengaduan='$id' AND tanggapan.id_pengaduan=pengaduan.id_penga
         }
         else{
         $data   = mysqli_fetch_array($query); ?>
-            <form method="post" action="proses-pengaduan.php" enctype="multipart/form-data">
+            <form method="post" action="../proses-pengaduan.php" enctype="multipart/form-data">
                 <div class="form-group">
                     <label style="font-size: 14px;">Tgl Pengaduan </label>
                         <input type="text" name="tgl_pengaduan" class="form-control" readonly 
