@@ -11,6 +11,7 @@
                         <tr>
                             <th>No</th>
                             <th>Tgl Pengaduan</th>
+                            <th>Kategori Pengaduan</th>
                             <th>Isi Laporan</th>
                             <th>Foto</th>
                             <th>Status</th>
@@ -21,6 +22,7 @@
                         <tr>
                             <th>No</th>
                             <th>Tgl Pengaduan</th>
+                            <th>Kategori Pengaduan</th>
                             <th>Isi Laporan</th>
                             <th>Foto</th>
                             <th>Status</th>
@@ -38,14 +40,13 @@
                             <tr>
                                 <td><?= $no++ ?></td>
                                 <td><?= $data['tgl_pengaduan']; ?></td>
+                                <td><?= $data['kategori_pengaduan']; ?></td>
                                 <td><?= $data['isi_laporan']; ?></td>
                                 <td><?= $data['foto']; ?></td>
                                 <td><?= $data['status']; ?></td>
                                 <td>
-
                                     <!-- Tambahkan checkbox verifikasi -->
                                     <input type="checkbox" name="verifikasi[]" value="<?= $data['id_pengaduan'] ?>">
-
                                 </td>
                             </tr>
                         <?php } ?>
