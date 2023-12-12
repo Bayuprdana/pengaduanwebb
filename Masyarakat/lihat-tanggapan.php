@@ -1,55 +1,72 @@
-<?php
-$id = $_GET['id'];
-if (empty($id)) {
-    header("Location: masyarakat.php");
-}
-
-include '../koneksi/koneksi.php';
-$query = mysqli_query($koneksi, "SELECT * FROM pengaduan
-    LEFT JOIN tanggapan ON tanggapan.id_tanggapan = pengaduan.id_pengaduan
-    WHERE tanggapan.id_tanggapan='$id'");
-
-?>
-<div class="card shadow">
-    <div class="card-header">
-        <a href="?url=lihat-pengaduan" class="btn btn-primary btn-icon-split">
-            <span class="icon text-white-5">
-                <i class="fa fa-arrow-left"></i>
-            </span>
-            <span class="text"> Kembali </span>
-        </a>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Data Pengaduan</h6>
     </div>
-    <div class="card-body">
-        <?php
-        if (mysqli_num_rows($query) == 0) {
-            echo "<div class='alert alert-danger'>Maaf Pengaduan Anda Belum Di Tanggapi</div>";
-        } else {
-            $data = mysqli_fetch_array($query);
-        ?>
-            <form>
-                <div class="form-group">
-                    <label style="font-size: 14px;">Kategori Pengaduan </label>
+    <div class="card-body" style="font-size: 14px;">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kategori Pengaduan</th>
+                        <th>Tgl Pengaduan</th>
+                        <th>Isi Laporan</th>
+                        <th>Foto</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>No</th>
+                        <th>Kategori Pengaduan</th>
+                        <th>Tgl Pengaduan</th>
+                        <th>Isi Laporan</th>
+                        <th>Foto</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php
+                    include '../koneksi/koneksi.php';
+                    $sql    = "SELECT * FROM pengaduan WHERE nik='$_SESSION[nik]' ORDER BY id_pengaduan DESC";
+                    $query  = mysqli_query($koneksi, $sql);
+                    $no     = 1;
 
-                    <input type="text" name="kategori_pengaduan" class="form-control" readonly value="<?= $data['kategori_pengaduan'] ?>">
-                </div>
-
-                <div class="form-group">
-                    <label style="font-size: 14px;">Tgl Pengaduan </label>
-
-                    <input type="date" name="tgl_pengaduan" class="form-control" readonly value="<?= $data['tgl_tanggapan'] ?>">
-                </div>
-
-                <div class="form-group">
-                    <label style="font-size: 14px">Laporan </label>
-                    <textarea name="isi_laporan" class="form-control" readonly><?= $data['isi_laporan'] ?></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label style="font-size: 14px">Tanggapan </label>
-
-                    <textarea name="tanggapan" class="form-control" readonly><?= $data['tanggapan'] ?></textarea>
-                </div>
-            </form>
-        <?php } ?>
+                    while($data = mysqli_fetch_array($query)){ ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $data['kategori_pengaduan']; ?></td>
+                        <td><?= $data['tgl_pengaduan']; ?></td>
+                        <td><?= $data['isi_laporan']; ?></td>
+                        <td><?= $data['foto']; ?></td>
+                        <td>
+                            <?php
+                            if ($data['status'] == 'SELESAI') {
+                                echo 'Laporan Anda Telah Di Selesaikan';
+                                // Jika ada keterangan dari petugas, tampilkan keterangan
+                                if (!empty($data['keterangan_petugas'])) {
+                                    echo ' - ' . $data['keterangan_petugas'];
+                                }
+                            } else {
+                                echo 'Maaf, Pengaduan Anda Belum Di Tanggapi';
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <a href="?url=detail-pengaduan&id=<?= $data['id_pengaduan'] ?>" class="btn btn-primary btn-icon-split">
+                                <span class="icon text-white-5">
+                                    <i class="fa fa-info"></i>
+                                </span>
+                                <span class="text"> Detail </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
