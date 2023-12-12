@@ -28,7 +28,6 @@ if (empty($_SESSION['nik'])){
 </head>
 
 <body id="page-top">
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -36,7 +35,7 @@ if (empty($_SESSION['nik'])){
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="(UBAH KE LINK WEB DESA))">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://banjaragung.id">
           <img src="../img/banjar.png" alt="Logo" class="sidebar-brand-icon rotate-n-15 custom-logo">
           <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
       </a>
@@ -108,6 +107,7 @@ if (empty($_SESSION['nik'])){
           <!-- Topbar search -->
 
           <h1> Layanan Pengaduan Masyarakat</h1>
+         
 
         </nav>
         <!-- End of Topbar -->

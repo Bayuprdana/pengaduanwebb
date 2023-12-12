@@ -24,7 +24,11 @@ if(isset($_GET['url'])){
                 break;
     }
 }else{
-    echo "Selamat Datang Di Aplikasi Pengaduan Masyarakat, Dimana Aplikasi ini dibuat untuk melaporkan keluh-kesah masyarakat.<br>";
-    echo "Anda Login Sebagai : " . $_SESSION['nama'];
+    //echo "Selamat Datang Di Aplikasi Pengaduan Masyarakat, Dimana Aplikasi ini dibuat untuk melaporkan keluh-kesah masyarakat.<br>";
+   echo "Anda Login Sebagai : " . $_SESSION['nama'];
+   echo "<br>";
+   include 'fotoatas.php';
+   echo "<br>";
+   include 'statistik.php';
 }
 ?> 
