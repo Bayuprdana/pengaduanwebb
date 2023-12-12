@@ -32,7 +32,14 @@
                     <tbody>
                         <?php
                         include '../koneksi/koneksi.php';
-                        $sql    = "SELECT * FROM pengaduan WHERE nik='$_SESSION[nik]' ORDER BY id_pengaduan DESC";
+                        //query based on level
+                        if($_SESSION['level']=="petugas"){
+                            $sql    = "SELECT * FROM pengaduan ORDER BY id_pengaduan DESC";
+                        }
+                        elseif($_SESSION['level']=="pengguna"){
+                            $sql    = "SELECT * FROM pengaduan WHERE nik='$_SESSION[nik]' ORDER BY id_pengaduan DESC";
+                        }
+
                         $query  = mysqli_query($koneksi, $sql);
                         $no     = 1;
 

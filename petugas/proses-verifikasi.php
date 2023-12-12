@@ -3,8 +3,8 @@ session_start();
 
 include '../koneksi/koneksi.php';
 
-$kategori_pengaduan = isset($_POST['kategori_pengaduan']) ? $_POST['kategori_pengaduan'] : '';
 $tgl_pengaduan = isset($_POST['tgl_pengaduan']) ? $_POST['tgl_pengaduan'] : '';
+$kategori_pengaduan = isset($_POST['kategori_pengaduan']) ? $_POST['kategori_pengaduan'] : '';
 $nik = isset($_POST['nik']) ? $_POST['nik'] : '';
 $isi_laporan = isset($_POST['isi_laporan']) ? $_POST['isi_laporan'] : '';
 $status = 0;
