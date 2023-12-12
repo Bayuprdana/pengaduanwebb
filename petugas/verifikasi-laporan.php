@@ -61,7 +61,7 @@
                 </table>
 
                 <!-- Tombol untuk memproses verifikasi -->
-                <input type="submit" value="Verifikasi Yang Dipilih">
+                <input type="submit" value="Verifikasi Laporan Yang Dipilih">
             </div>
         </form>
     </div>

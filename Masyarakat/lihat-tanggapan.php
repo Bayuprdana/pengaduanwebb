@@ -5,8 +5,9 @@ if (empty($id)) {
 }
 
 include '../koneksi/koneksi.php';
-$query  = mysqli_query($koneksi, "SELECT * FROM pengaduan,tanggapan 
-WHERE tanggapan.id_pengaduan='$id' AND tanggapan.id_pengaduan=pengaduan.id_pengaduan");
+$query = mysqli_query($koneksi, "SELECT * FROM pengaduan
+    LEFT JOIN tanggapan ON tanggapan.id_tanggapan = pengaduan.id_pengaduan
+    WHERE tanggapan.id_tanggapan='$id'");
 
 ?>
 <div class="card shadow">
