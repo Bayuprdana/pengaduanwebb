@@ -53,7 +53,7 @@
                                 <i class="fa fa-laptop fa-fw"></i> Belum Punya akun..? Daftar Sekarang
                             </a>
                             <a href="index2.php" class="btn btn-success btn-user btn-block">
-                                <i class="fa fa-laptop fa-fw"></i> Login Sebagai Admin / Petugas
+                                <i class="fa fa-laptop fa-fw"></i> Login Sebagai Petugas
                             </a>
                     </form>
                 </div>
