@@ -32,11 +32,12 @@ $no = 1;
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Pengaduan</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Verifikasi Pengaduan</h6>
     </div>
     <div class="card-body" style="font-size: 14px;">
         <form action="" method="post">
             <div class="table-responsive">
+                <!-- Tabel Checkbox -->
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
@@ -52,13 +53,9 @@ $no = 1;
                     <tbody>
                         <?php 
                         $current_category = null; // untuk melacak kategori saat ini
-                        
+
                         while ($data = mysqli_fetch_array($query)) : 
                             // Jika kategori berubah, tampilkan judul kategori baru
-                            if ($current_category !== $data['kategori_pengaduan']) {
-                                echo '<tr class="font-weight-bold"><td colspan="7">' . $data['kategori_pengaduan'] . '</td></tr>';
-                                $current_category = $data['kategori_pengaduan'];
-                            }
                         ?>
                             <tr>
                                 <td><?= $no++ ?></td>
@@ -69,12 +66,7 @@ $no = 1;
                                 <td><?= $data['status']; ?></td>
                                 <td>
                                     <input type="checkbox" name="verifikasi[]" value="<?= $data['id_pengaduan'] ?>">
-                                    <!-- Menambahkan input tersembunyi untuk setiap nilai yang perlu disimpan -->
-                                    <input type="hidden" name="kategori_pengaduan[<?= $data['id_pengaduan'] ?>]" value="<?= $data['kategori_pengaduan'] ?>">
-                                    <input type="hidden" name="tgl_pengaduan[<?= $data['id_pengaduan'] ?>]" value="<?= $data['tgl_pengaduan'] ?>">
-                                    <input type="hidden" name="nik[<?= $data['id_pengaduan'] ?>]" value="<?= $data['nik'] ?>">
-                                    <input type="hidden" name="isi_laporan[<?= $data['id_pengaduan'] ?>]" value="<?= $data['isi_laporan'] ?>">
-                                    <input type="hidden" name="foto[<?= $data['id_pengaduan'] ?>]" value="<?= $data['foto'] ?>">
+                                    <!-- ... (input tersembunyi) ... -->
                                 </td>
                             </tr>
                         <?php endwhile; ?>
@@ -85,5 +77,54 @@ $no = 1;
                 <input type="submit" value="Verifikasi Laporan Yang Dipilih" class="btn btn-primary">
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Tabel Detail -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Detail Laporan</h6>
+    </div>
+    <div class="card-body" style="font-size: 14px;">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="detailTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tgl Pengaduan</th>
+                        <th>Kategori Pengaduan</th>
+                        <th>Isi Laporan</th>
+                        <th>Foto</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    $query_detail = mysqli_query($koneksi, $sql); // Ganti dengan query yang sesuai untuk detail
+                    
+                    while ($data_detail = mysqli_fetch_array($query_detail)) : 
+                        // Jika kategori berubah, tampilkan judul kategori baru
+                    ?>
+                        <tr>
+                            <td><?= $no++ ?></td>
+                            <td><?= $data_detail['tgl_pengaduan']; ?></td>
+                            <td><?= $data_detail['kategori_pengaduan']; ?></td>
+                            <td><?= $data_detail['isi_laporan']; ?></td>
+                            <td><?= $data_detail['foto']; ?></td>
+                            <td><?= $data_detail['status']; ?></td>
+                            <td>
+                                <a href="../Masyarakat/detail-pengaduan.php?id=<?= $data_detail['id_pengaduan'] ?>" class="btn btn-primary btn-icon-split">
+                                    <span class="icon text-white-5">
+                                        <i class="fa fa-info"></i>
+                                    </span>
+                                    <span class="text"> Detail </span>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

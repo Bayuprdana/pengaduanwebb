@@ -23,6 +23,7 @@ if ($_SESSION['level']!="petugas"){
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../css/pengaduan2.css" rel="stylesheet">
   <!-- Custom styles for this page -->
   <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -100,7 +101,7 @@ if ($_SESSION['level']!="petugas"){
 
           <!-- Topbar search -->
 
-          <h1> Aplikasi Pengaduan Masyarakat</h1>
+          <h1> Layanan Pengaduan Masyarakat</h1>
 
         </nav>
         <!-- End of Topbar -->
@@ -121,7 +122,7 @@ if ($_SESSION['level']!="petugas"){
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Aplikasi Pelaporan Masyarakat</span>
+            <span>Layanan Pengaduan Masyarakat</span>
           </div>
         </div>
       </footer>

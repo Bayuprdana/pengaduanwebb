@@ -370,8 +370,16 @@
   
   h1, .h1 {
     font-size: 2.5rem;
+    color: #4e73df;
+    font-weight: bolder;
   }
   
+  .btn-info {
+    color: #fff;
+    background-color: #36b9cc;
+    border-color: #36b9cc;
+  }
+
   h2, .h2 {
     font-size: 2rem;
   }
@@ -12042,4 +12050,6 @@
   body.sidebar-toggled footer.sticky-footer {
     width: 100%;
   }
+  
+
   
