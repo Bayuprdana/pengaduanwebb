@@ -37,10 +37,8 @@ if ($_SESSION['level']!="petugas"){
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://banjaragung.id">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-th-large"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
+          <img src="../img/banjar.png" alt="Logo" class="sidebar-brand-icon rotate-n-15 custom-logo">
+          <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
       </a>
 
       <!-- Divider -->
